@@ -193,17 +193,7 @@ MVC 패턴 <br/>
 JSP의 경우 InternalResourceView(JstlView) 를 반환하는데, 내부에 forward() 로직이 있다.
 8. 뷰 렌더링: 뷰를 통해서 뷰를 렌더링 한다
 
-+ 추가 
-### RequestMappingHandlerAdapter 동작 방식 <br/>
-  ![image](https://user-images.githubusercontent.com/78194843/164626186-f5c8df0e-daf9-4d15-8427-24e56f0aa4c4.png)
 
-### ArgumentResolver
-생각해보면, 애노테이션 기반의 컨트롤러는 매우 다양한 파라미터를 사용할 수 있었다.<br/>
-HttpServletRequest , Model 은 물론이고, @RequestParam , @ModelAttribute 같은 애노테이션 그리고 @RequestBody , HttpEntity 같은 HTTP 메시지를 처리하는 부분까지 매우 큰 유연함을 보여주었다.<br/>
-이렇게 파라미터를 유연하게 처리할 수 있는 이유가 바로 ArgumentResolver 덕분이다.<br/>
-애노테이션 기반 컨트롤러를 처리하는 RequestMappingHandlerAdaptor 는 바로 이 ArgumentResolver 를 호출해서 컨트롤러(핸들러)가 필요로 하는 다양한 파라미터의 값(객체)을 생성한다.<br/>
-그리고 이렇게 파리미터의 값이 모두 준비되면 컨트롤러를 호출하면서 값을 넘겨준다.<br/>
-스프링은 30개가 넘는 ArgumentResolver 를 기본으로 제공한다.<br/>
 
   
   
